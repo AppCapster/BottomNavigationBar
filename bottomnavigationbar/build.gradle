@@ -9,7 +9,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -23,12 +23,36 @@ android {
     }
 
 }
+ext {
+    bintrayRepo = 'mylibs'
+    bintrayName = 'BottomNavigationBar'
 
+    publishedGroupId = "com.monika.bottomnavigationbar"
+    libraryName = 'BottomNavigationBar'
+    artifact = 'bottom-navigation-bar'
+
+    libraryDescription = 'A simple demo of BottomNavigationBar Android'
+
+    siteUrl = 'https://github.com/AppCapster/BottomNavigationBar'
+    gitUrl = 'https://github.com/AppCapster/BottomNavigationBar'
+
+    libraryVersion = "${project.android.defaultConfig.versionName}"
+
+    developerId = 'monikakale'
+    developerName = 'monika kale'
+    developerEmail = 'monika.kale369@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
