@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,9 +58,10 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(fragment);
                         break;
                     case 3:
-                        toolbar.setTitle(R.string.title_settings);
-                        fragment = MyFragment.newInstance("Key1", "Value1");
-                        loadFragment(fragment);
+//                        toolbar.setTitle(R.string.title_settings);
+//                        fragment = MyFragment.newInstance("Key1", "Value1");
+//                        loadFragment(fragment);
+                        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                         break;
                 }
             }
