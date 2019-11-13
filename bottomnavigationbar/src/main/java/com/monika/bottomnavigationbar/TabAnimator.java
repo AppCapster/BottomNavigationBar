@@ -1,7 +1,6 @@
 package com.monika.bottomnavigationbar;
+import android.support.annotation.NonNull;
 import android.view.View;
-
-import androidx.annotation.NonNull;
 
 class TabAnimator {
 

@@ -3,15 +3,13 @@ package com.monika.bottomnavigationbar;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
+import android.support.annotation.*;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import static android.view.View.GONE;
 import static com.monika.bottomnavigationbar.TabAnimator.animateTranslationY;
-import androidx.annotation.ColorInt;
-import androidx.annotation.DimenRes;
-import androidx.annotation.NonNull;
-import androidx.core.graphics.drawable.DrawableCompat;
 
 class Tab {
     private final BottomBarItem item;

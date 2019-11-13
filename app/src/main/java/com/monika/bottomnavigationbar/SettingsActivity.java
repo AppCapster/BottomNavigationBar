@@ -58,14 +58,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // load settings fragment
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new MainPreferenceFragment()).commit();
+//        getFragmentManager().beginTransaction().replace(android.R.id.content, new MainPreferenceFragment()).commit();
     }
 
     public static class MainPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.pref_main);
+            /*addPreferencesFromResource(R.xml.pref_main);
 
             // gallery EditText change listener
             bindPreferenceSummaryToValue(findPreference(getString(R.string.key_gallery_name)));
@@ -80,11 +80,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     sendFeedback(getActivity());
                     return true;
                 }
-            });
+            });*/
         }
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             onBackPressed();
@@ -101,10 +101,10 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         .getString(preference.getKey(), ""));
     }
 
-    /**
+    *//**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
-     */
+     *//*
     private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -156,11 +156,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     };
 
-    /**
+    *//**
      * Email client intent to send support mail
      * Appends the necessary device information to email body
      * useful when providing support
-     */
+     *//*
     public static void sendFeedback(Context context) {
         String body = null;
         try {
@@ -176,5 +176,5 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, "Query from android app");
         intent.putExtra(Intent.EXTRA_TEXT, body);
         context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_email_client)));
-    }
+    }*/
 }
